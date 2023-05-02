@@ -1,0 +1,20 @@
+%---------------------------------------------------------------------------
+%	Custom Enviroments
+%---------------------------------------------------------------------------
+\newcommand{\AssignmentNum}{Assignment 3} % Assignment Number
+\newcommand{\ClassName}{PHYS 5573 HW Review} % Class Number
+\newcommand{\StudentName}{Taylor Larrechea} % Student Name
+\newcommand{\operator}[1]{ % Operator Command
+	\tilde{\textbf{#1}}
+}   
+\rhead{\AssignmentNum}
+\lhead{\ClassName}
+\chead{\StudentName}
+%---------------------------------------------------------------------------
+%	Custom Enviroments
+%---------------------------------------------------------------------------
+\newenvironment{Review}[2]
+    {\section*{#1 Review}
+    #2 
+    }
+    {\newpage}

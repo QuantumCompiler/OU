@@ -1,0 +1,98 @@
+%---------------------------------------------------------------------------
+%	Preamble Etc.
+%---------------------------------------------------------------------------
+\input{"Files/Preamble.tex"}
+\input{"Files/Commands & Environments.tex"}
+%---------------------------------------------------------------------------
+%	Document
+%---------------------------------------------------------------------------
+\begin{document}
+\input{"Files/Title Page.tex"}
+%---------------------------------------------------------------------------
+%	Problem 1
+%---------------------------------------------------------------------------
+\begin{Problem}{Problem 1:}{
+Consider a sphere of radius $R$ and total charge $Q$ that has been embedded with an $r$‐dependent charge density:
+\begin{equation*}
+\rho(\vec{r}) = Cr
+\end{equation*}
+\begin{enumerate}[label=(\alph*)]
+\item Write and solve an integral to determine $C$ in terms of the properties of the sphere, $Q$ and $r$. For the rest of the problem, use this result for $C$ in $\rho(\vec{r})$.
+\item Explain why and how you can use Gauss’ Law to solve for the electric field of the charged sphere.
+\item Set up your solution and determine $\vec{E}(\vec{r})$ for all $r$. You will have somewhat different results for $0 \leq r \leq R$ and for $r \geq R$. These results should agree for $r = R$.
+\item Solve for $\phi(\vec{r})$ for all $r$. As usual, define $\phi(\infty)=0$.
+\item Solve for the total electric potential energy of the charged sphere. This can be considered the total energy (work) necessary to bring all the charges together in the sphere.
+\item Consider a similar sphere with the charge density $\rho(\vec{r}) = Cr\cos^{2}{\theta}$. Set up a multipole expansion to solve for $\phi(\vec{r})$ and show (explain) that there will only be two terms in the expansion. If you wish, you can solve this.
+\end{enumerate}
+}
+\end{Problem}
+%---------------------------------------------------------------------------
+%	Problem 2
+%---------------------------------------------------------------------------
+\begin{Problem}{Problem 2:}
+{
+The Magnetic analog to the problem above is a long, current‐carrying wire with a current density that varies across the radius of the wire. \\ \newline
+\noindent
+Use polar coordinates: $\hat{z}$ along the wire, $\hat{r}$ the radial direction
+perpendicular to $\hat{z}$, and $\hat{\phi}$ the azimuthal angle around $\hat{z}$. \\ \newline
+\noindent
+The wire has a radius $R$ and total current $I$ in the $\hat{z}$ direction. The current density is:
+\begin{equation*}
+\vec{J}(\vec{r}) = Cr\hat{z}
+\end{equation*}
+\begin{enumerate}[label=(\alph*)]
+\item Write an equation relating the total current in the wire, $I$, to the current density, $\vec{J}(\vec{r})$ for the wire. Use this to Derive an expression for the constant $C$ in terms of properties of the wire, $I$ and $R$.
+\item Use the symmetry of the problem and the relation between the current (density) and the magnetic field to determine the general form for the magnetic field, $\vec{B}(\vec{r})$. Specifically, what direction is the field and how does it depend on $r, \phi,$ and $z$?
+\item Explain why you can use Ampere's Law to solve for $\vec{B}(\vec{r})$.
+\item Calculate $\vec{B}(\vec{r})$ everywhere. Be sure to explain your approach.
+\item Show that the magnetic potential energy of the wire is infinite. This shouldn't be surprising, as it is an infinitely long wire.
+\end{enumerate}
+}
+\end{Problem}
+%---------------------------------------------------------------------------
+%	Problem 3
+%---------------------------------------------------------------------------
+\begin{Problem}{Problem 3:}
+{
+Consider a uniform charged rod of charge $Q$ and length $L$, $\lambda = Q/L$, on the $z$-axis, centered at the origin, extending from $z = -\frac{L}{2}$ to $z = \frac{L}{2}$.
+\begin{enumerate}[label=(\alph*)]
+\item Write an integral over the charged rod for the electric potential on the $z$‐axis. Calculate the electric potential due to the rod on the $z$‐axis for all $z > \frac{L}{2}$.
+\item Expand your result for $\phi(z)$ in powers of $L/(2z)$. It will be useful to know that: (If both expressions don't help you, you'll probably want to redo your integral from part (a).)
+\begin{equation*}
+\ln{(1-x)} = - \sum^{\infty}_{n=1} \frac{x^{n}}{n}, \hspace{10pt} \ln{(1+x)} = \sum^{\infty}_{n=1} (-1)^{n-1} \frac{x^{n}}{n}
+\end{equation*}
+\item Using this expansion, you can determine a sum for the potential $\phi(r,\theta)$ everywhere. Note that for points along the $z$-axis:
+\begin{equation*}
+\phi(z) = \phi(r,\theta = 0)
+\end{equation*}
+The potential everywhere is given by:
+\begin{equation*}
+\phi(r,\theta) = \sum^{\infty}_{l=0} \frac{a_{l}}{r^{l+1}} P_{l}(\cos{\theta})
+\end{equation*}
+Using the result from part (b), determine an expression for all the coefficients $a_{l}$.
+Note: $P_{l}(\cos(0)) = P_{l}(1) = 1$ for all $l$.
+\item Using the multipole expansion for the electric potential, calculate the monopole, dipole, and quadrupole potential terms due to the line charge. Show that these terms agree with part (c).
+\end{enumerate}
+}
+\end{Problem}
+%---------------------------------------------------------------------------
+%	Problem 4
+%---------------------------------------------------------------------------
+\begin{Problem}{Problem 4:}
+{
+A square current‐carrying loop with sides of length $l$ and counter‐clockwise current $I$ is in the $x-y$ plane and centered at the origin. Calculate the magnetic field at the point $\vec{r} = d \hat{x}$.
+\begin{enumerate}[label=(\alph*)]
+\item What is the magnetic field at the point $\vec{r} = d \hat{x}$ if you approximate the loop by a magnetic dipole?
+\item Use cross products to determine the direction of the magnetic field due to each side of the loop at $\vec{r}$.
+\item Write down integrals for the magnetic field at $\vec{r}$ due to each side of the current loop.
+\item Solve for the magnetic field due to the loop at $\vec{r}$. It might be useful to know that:
+\begin{equation*}
+\int \frac{dx}{(a^{2}+x^{2})^{3/2}} = \frac{x}{a^{2}\sqrt{a^{2}+x^{2}}}
+\end{equation*}
+Note: The results are somewhat messy.
+\item Expand your result above for $d >> l$ $\frac{l}{d} << 1$ to the lowest non‐zero power in $1/d$. Show that this gives the dipole approximation from part (a).
+\end{enumerate}
+Hint: It’s a good idea to expand the fields from the right and left wires together, and the top and bottom wires together.
+}
+\end{Problem}
+\end{document}

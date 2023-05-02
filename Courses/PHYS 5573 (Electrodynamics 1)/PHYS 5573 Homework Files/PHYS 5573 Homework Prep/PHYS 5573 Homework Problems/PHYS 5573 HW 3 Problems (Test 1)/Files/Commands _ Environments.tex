@@ -1,0 +1,30 @@
+%---------------------------------------------------------------------------
+%	Custom Commands
+%---------------------------------------------------------------------------
+\newcommand{\AssignmentNum}{Assignment 3} % Assignment Number
+\newcommand{\ClassCode}{PHYS 5573 } % Class Code
+\newcommand{\ClassName}{Electrodynamics 1} % Class Name
+\newcommand{\StudentName}{Taylor Larrechea} % Student Name
+\newcommand{\ProfessorName}{Dr. Bruce Mason} % Professor Name
+\newcommand{\Problems}{1, 2, 3, 4} % Problems
+\newcommand{\DueDate}{Due: March 28, 2022 at 5:00 PM} % Due Date
+\newcommand{\operator}[1]{ % Operator Command
+	\tilde{\textbf{#1}}
+}  
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\AssignmentNum}
+\lhead{\ClassCode HW}
+\chead{\StudentName}
+%---------------------------------------------------------------------------
+%	Custom Enviroments
+%---------------------------------------------------------------------------
+\newenvironment{Problem}[2]
+    {\section*{#1}
+    #2
+	\newpage
+	\section*{#1}
+	\newpage
+	\section*{#1 Continued}    
+    }
+    {\newpage}  
